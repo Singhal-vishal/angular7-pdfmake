@@ -1,21 +1,57 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div style="font-size: 110%;padding-top:5px; padding-left:2px; padding-right:2px" id="content" #content>
+  <div>
+    <h3 style="text-align: center;">
+      Shri G.S Institute of Technology & Science, Indore
+    </h3>
+    <br/>
+    <h5 style="text-align: center;">
+      <u>Telephone Complaint</u>
+    </h5>
+  </div>
+  <br/>
+  <div class="container">
+    <table class="table table-bordered" width="100%" style="font-size: 150%;">
+      <thead style="text-align: left;">
+        <tr>
+          <th>S.No</th>
+          <th>Extension No.</th>
+          <th>Location(Department/Section)</th>
+          <th>Complaint Description</th>
+          <th>Date at which complaint submitted</th>
+          <th>Date at which complaint solved</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let val of telephoneComplaints; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{val.extensionNo}}</td>
+          <td>{{val.location}}</td>
+          <td>{{val.details}}</td>
+          <td>{{val.createdDate}}</td>
+          <td>{{val.dateOfResolution}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-size:125%">
+    <p style="text-align: right;">
+        HEAD
+      <br/>
+      Department of Computer Engineering
+    </p>
+  </div>
+  <br/>
+  <hr style="border-top: dotted 1px;" />
+  <br/>
+  <div style="font-size:150%">
+    <h4 style="text-align:center">
+      Receipt
+    </h4>
+    <br/>
+    The Complaint related to Extension no.<span style="border-bottom: dotted 1px;padding-right:200px"></span>is received on<span style="border-bottom: dotted 1px;padding-right:150px"></span> 
+  </div>
+  
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<button (click)="captureScreen()">Download</button> 
+<button (click)="generatePdf()">Open PDF</button>
