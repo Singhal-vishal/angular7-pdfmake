@@ -21,7 +21,7 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
     "html2canvas": "^1.0.0-rc.5",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.5.1",
     "pdfmake": "^0.1.65",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
